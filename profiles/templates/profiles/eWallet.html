@@ -1,0 +1,77 @@
+{% extends 'profiles/profile_base_layout.html' %}
+
+{% block headcontent %}
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Cinzel|PT+Serif');
+        
+        body {
+            background-color: rgb(252, 250, 250);
+        }
+        h2 {
+            font-family: "PT Serif";
+        }
+
+        #side_panel
+        {
+            font-size: 16px;
+            font-family: "Titillium Web";
+            background-color: rgb(180, 34, 34);
+            margin-top: -7px;
+            margin-left: -10px;
+            height: 540px;
+            overflow-x: auto;
+            overflow-y: auto;
+        }
+        
+        .side {
+            color: rgb(22, 195, 36);
+        }
+        .side:hover {
+            color: rgb(234, 247, 2);
+        }
+        .warning {
+            color: rgb(22, 195, 36);
+        }
+        .danger {
+            color: #fb0505;
+            font-weight: 900;
+        }
+        .current {
+            border: 1px solid;
+            padding: 3px;
+        }
+        .curr_bal {
+            font-family: "Cinzel";
+            font-weight: 600;
+        }
+        
+        #side_panel::-webkit-scrollbar {
+            width: 7px;
+        }
+        #side_panel::-webkit-scrollbar:hover {
+            width: 12px;
+        }
+        #side_panel::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.3);
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+        }
+    </style>
+{% endblock %}
+
+{% block bodycontent %}
+    <section id="welcome_post" class="col-9">
+        <h4 style="font-weight: 300;" >
+            Sorry, this feature is still in progess the bank currently does not support the feature of eWallet.</h4>
+    </section>
+{% endblock %}
+
+{% block scriptcontent %}
+    <script>
+        $(".current").removeClass("current");
+        $("#ewallet").addClass("current");
+    </script>
+{% endblock %}
